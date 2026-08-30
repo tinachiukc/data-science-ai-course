@@ -91,29 +91,23 @@ function officeViewerUrl(relativePath) {
   return relativePath;
 }
 
-function materialCard(kind, weekNo) {
+function materialMeta(kind, weekNo) {
   const base = `../materials/week${weekNo}/`;
-  const meta = {
+
+  return {
     slides: {
-      title: '教師授課 PPT',
+      title: '上課投影片',
       format: 'PowerPoint（PPTX）',
       path: `${base}slides.pptx`,
       label: '線上開啟 PowerPoint ↗',
       office: true
     },
     worksheet: {
-      title: '學生空白學習單',
+      title: '學習單',
       format: 'Word（DOCX）',
       path: `${base}worksheet.docx`,
       label: '線上開啟 Word 學習單 ↗',
       office: true
-    },
-    dataset: {
-      title: '本週資料',
-      format: 'CSV',
-      path: `${base}dataset.csv`,
-      label: '開啟資料集 ↗',
-      office: false
     },
     plus: {
       title: 'Plus｜AI 視覺補充教材',
@@ -121,22 +115,60 @@ function materialCard(kind, weekNo) {
       path: `${base}plus.pdf`,
       label: '開啟 Plus 補充教材 ↗',
       office: false
+    },
+    data: {
+      title: '練習資料',
+      format: 'CSV',
+      path: `${base}data.csv`,
+      label: '開啟練習資料 ↗',
+      office: false
     }
   }[kind];
+}
 
+function materialCard(kind, weekNo) {
+  const meta = materialMeta(kind, weekNo);
   if (!meta) return '';
 
   const href = meta.office ? officeViewerUrl(meta.path) : meta.path;
 
   return `
-    <div class="resource-card">
+    <div class="resource-card" data-material-kind="${kind}">
       <h3>${meta.title}</h3>
       <p class="muted">${meta.format}</p>
       <div class="actions">
-        <a class="btn secondary" href="${href}" target="_blank" rel="noopener noreferrer">${meta.label}</a>
+        <a class="btn secondary"
+           href="${href}"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-source-path="${meta.path}">${meta.label}</a>
       </div>
     </div>
   `;
+}
+
+async function updateMaterialAvailability() {
+  const cards = $$('#materials .resource-card');
+
+  await Promise.all(cards.map(async (card) => {
+    const link = card.querySelector('a[data-source-path]');
+    if (!link) return;
+
+    const sourcePath = link.dataset.sourcePath;
+    try {
+      const response = await fetch(sourcePath, { method: 'HEAD', cache: 'no-store' });
+      if (!response.ok) throw new Error('File not found');
+    } catch (error) {
+      link.removeAttribute('href');
+      link.removeAttribute('target');
+      link.removeAttribute('rel');
+      link.setAttribute('aria-disabled', 'true');
+      link.textContent = '尚無補充';
+      link.style.opacity = '0.55';
+      link.style.cursor = 'default';
+      link.style.pointerEvents = 'none';
+    }
+  }));
 }
 
 function renderWeek() {
@@ -163,9 +195,12 @@ function renderWeek() {
 
   $('#ai-role').textContent = data.aiRole;
   $('#human-list').innerHTML = (data.human || []).map((item) => `<li>${item}</li>`).join('');
-  $('#materials').innerHTML = (data.materials || ['slides', 'worksheet'])
+  const fixedMaterials = ['slides', 'worksheet', 'plus', 'data'];
+  $('#materials').innerHTML = fixedMaterials
     .map((kind) => materialCard(kind, weekNo))
     .join('');
+
+  updateMaterialAvailability();
 
   const links = [
     ['Google Forms', data.form],
