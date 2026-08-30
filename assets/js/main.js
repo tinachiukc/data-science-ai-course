@@ -114,6 +114,13 @@ function materialCard(kind, weekNo) {
       path: `${base}dataset.csv`,
       label: '開啟資料集 ↗',
       office: false
+    },
+    plus: {
+      title: 'Plus｜AI 視覺補充教材',
+      format: 'PDF',
+      path: `${base}plus.pdf`,
+      label: '開啟 Plus 補充教材 ↗',
+      office: false
     }
   }[kind];
 

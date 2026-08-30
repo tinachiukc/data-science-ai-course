@@ -18,7 +18,7 @@ window.COURSE_DATA = {
       goals:["用自己的話說明資料科學與大數據的基本意義","辨認金融與日常生活中常見的資料來源","區分『擁有資料』與『能利用資料支持決策』","說明生成式 AI 可協助什麼，以及為何仍需人工查核"],
       aiRole:"解說者：協助理解概念與情境，但不替學生做最後判斷。",
       human:["先理解 AI 回答，再確認哪些說法需要查核","根據情境與證據形成自己的判斷","不把 AI 的流暢回答直接當成事實"],
-      materials:["slides","worksheet"], form:"", colab:"", notebooklm:"", extra:""
+      materials:["slides","worksheet","plus"], form:"", colab:"", notebooklm:"", extra:""
     },
     "02": {
       module:"m1", title:"先看懂資料", term:"資料集、變數與資料品質",
