@@ -45,23 +45,12 @@ window.COURSE_DATA = {
       materials:["slides","worksheet","plus","data"], form:"", colab:"", notebooklm:"", extra:""
     },
   "05": {
-  module:"m2",
-  title:"我的第一份金融資料分析報告",
-  term:"AI＋Python 金融資料分析實作",
-  question:"如何運用 AI 與 Python，從真實金融資料中發現有價值的資訊？",
-  goals:[
-    "使用 yfinance 取得 0050 ETF 真實歷史行情",
-    "利用 Python 計算平均數、中位數、最大值與最小值",
-    "繪製金融資料走勢圖並解讀分析結果",
-    "查核 AI 分析並完成個人金融資料分析報告"
-  ],
-  aiRole:"程式與分析助理：協助產生 Python 程式、整理資料及提出初步解釋，但分析結果必須經過驗證。",
-  human:[
-    "親自執行 Python 程式並確認資料來源",
-    "檢查統計數值與圖表是否正確",
-    "判斷金融意義，修正 AI 的過度推論"
-  ],
-  materials:["slides","worksheet","plus","data"],
+   module:"m2", title:"我的第一份金融資料分析報告", term:"AI＋Python 金融資料分析實作",
+   question:"如何運用 AI 與 Python，從真實金融資料中發現有價值的資訊？",
+   goals:["使用 yfinance 取得 0050 ETF 真實歷史行情","利用 Python 計算平均數、中位數、最大值與最小值","繪製金融資料走勢圖並解讀分析結果", "查核 AI 分析並完成個人金融資料分析報告"],
+   aiRole:"程式與分析助理：協助產生 Python 程式、整理資料及提出初步解釋，但分析結果必須經過驗證。",
+   human:["親自執行 Python 程式並確認資料來源","檢查統計數值與圖表是否正確","判斷金融意義，修正 AI 的過度推論"],
+   materials:["slides","worksheet","plus","data"],
   form:"",
   colab:"",
   notebooklm:"",
