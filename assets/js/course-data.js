@@ -44,14 +44,29 @@ window.COURSE_DATA = {
       human:["檢查平均數、中位數等數字是否適合描述資料","注意極端值與資料分布對解讀的影響","不把描述統計直接寫成原因或因果"],
       materials:["slides","worksheet","plus","data"], form:"", colab:"", notebooklm:"", extra:""
     },
-    "05": {
-      module:"m2", title:"AI 說得對嗎？", term:"資料分析結果的查核與驗證",
-      question:"AI 給我一份看起來很專業的分析，我怎麼知道它是對的？",
-      goals:["查核 AI 使用的資料與欄位","查核計算與分析結果","區分資料事實、分析結果、可能解釋與決策建議","修正 AI 的過度推論或無證據建議"],
-      aiRole:"分析助手：可以提出分析與解釋，但必須接受『查資料、查計算、查解釋、查推論、查建議』五查。",
-      human:["最後回到原始資料確認證據","辨認 AI 哪一句超過資料可以支持的範圍","完成自己的修正結論"],
-      materials:["slides","worksheet","plus","data"], form:"", colab:"", notebooklm:"", extra:""
-    },
+  "05": {
+  module:"m2",
+  title:"我的第一份金融資料分析報告",
+  term:"AI＋Python 金融資料分析實作",
+  question:"如何運用 AI 與 Python，從真實金融資料中發現有價值的資訊？",
+  goals:[
+    "使用 yfinance 取得 0050 ETF 真實歷史行情",
+    "利用 Python 計算平均數、中位數、最大值與最小值",
+    "繪製金融資料走勢圖並解讀分析結果",
+    "查核 AI 分析並完成個人金融資料分析報告"
+  ],
+  aiRole:"程式與分析助理：協助產生 Python 程式、整理資料及提出初步解釋，但分析結果必須經過驗證。",
+  human:[
+    "親自執行 Python 程式並確認資料來源",
+    "檢查統計數值與圖表是否正確",
+    "判斷金融意義，修正 AI 的過度推論"
+  ],
+  materials:["slides","worksheet","plus","data"],
+  form:"",
+  colab:"",
+  notebooklm:"",
+  extra:""
+},
     "06": {
       module:"m3", title:"先問對問題", term:"從金融情境到資料問題",
       question:"一個金融／商管問題，要怎麼變成資料可以回答的問題？",
