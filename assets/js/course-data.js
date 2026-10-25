@@ -94,7 +94,7 @@ window.COURSE_DATA = {
       goals:["區分資料證據、可能解釋與決策建議","使用『證據—決策橋』整理分析到決策的思考","理解決策準則與利害關係人如何影響選擇","使用 AI 決策查核四問檢查建議"],
       aiRole:"決策助手（Decision Assistant），但不是決策者。",
       human:["說清楚自己採用的決策目標與準則","指出還缺少哪些資訊，而不是證據不足時硬選","檢查 AI 使用了哪些證據、準則與隱含假設"],
-      materials:["slides","worksheet","plus","data"], form:"", colab:"", notebooklm:"", extra:""
+      materials:["slides_v2","worksheet","plus","data"], form:"", colab:"", notebooklm:"", extra:""
     },
     "11": {
       module:"m4", title:"數字好不好，要跟誰比？", term:"Benchmark、比例與公平比較",
@@ -134,7 +134,7 @@ window.COURSE_DATA = {
       goals:["理解資料溝通要同時做到清楚與準確","使用『結果—解釋—邊界』三句法","依受眾調整表達但不改變證據意思","使用圖表溝通四問避免視覺與語氣誤導","查核 AI 改寫是否偷偷加強語氣","完成 Week 16 五張核心投影片"],
       aiRole:"溝通助手（Communication Assistant）＋批判者（Critic）。",
       human:["保留重要數字、限制與不確定性","拒絕 AI 把『同時發生』改成『造成』或把普通差異寫成『大幅』","完成最終修訂與發表內容，而不是把 AI 改寫原封不動提交"],
-      materials:["slides","worksheet","plus","data"], form:"", colab:"", notebooklm:"", extra:""
+      materials:["slides_v2","worksheet","plus","data"], form:"", colab:"", notebooklm:"", extra:""
     },
     "16": {
       module:"special", type:"showcase", title:"金融 × 資料 × AI", term:"學生作品成果發表",
