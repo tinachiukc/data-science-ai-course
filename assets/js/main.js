@@ -98,7 +98,7 @@ function materialMeta(kind, weekNo) {
     slides: {
       title: '上課投影片',
       format: 'PowerPoint（PPTX）',
-      path: `${base}${weekNo === '10' || weekNo === '15' ? 'slides_v2.pptx' : 'slides.pptx'}`,
+      path: `${base}${['10', '15'].includes(String(weekNo)) ? 'slides_v2.pptx' : 'slides.pptx'}`,
       label: '線上開啟 PowerPoint ↗',
       office: true
     },
