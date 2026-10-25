@@ -94,7 +94,7 @@ window.COURSE_DATA = {
       goals:["區分資料證據、可能解釋與決策建議","使用『證據—決策橋』整理分析到決策的思考","理解決策準則與利害關係人如何影響選擇","使用 AI 決策查核四問檢查建議"],
       aiRole:"決策助手（Decision Assistant），但不是決策者。",
       human:["說清楚自己採用的決策目標與準則","指出還缺少哪些資訊，而不是證據不足時硬選","檢查 AI 使用了哪些證據、準則與隱含假設"],
-      materials:["slides","worksheet","plus","data"], form:"", colab:"", notebooklm:"", extra:""
+      materials:["slides_v2","worksheet","plus","data"], form:"", colab:"", notebooklm:"", extra:""
     },
     "11": {
       module:"m4", title:"數字好不好，要跟誰比？", term:"Benchmark、比例與公平比較",
