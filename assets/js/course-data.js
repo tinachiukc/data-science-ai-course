@@ -134,7 +134,7 @@ window.COURSE_DATA = {
       goals:["理解資料溝通要同時做到清楚與準確","使用『結果—解釋—邊界』三句法","依受眾調整表達但不改變證據意思","使用圖表溝通四問避免視覺與語氣誤導","查核 AI 改寫是否偷偷加強語氣","完成 Week 16 五張核心投影片"],
       aiRole:"溝通助手（Communication Assistant）＋批判者（Critic）。",
       human:["保留重要數字、限制與不確定性","拒絕 AI 把『同時發生』改成『造成』或把普通差異寫成『大幅』","完成最終修訂與發表內容，而不是把 AI 改寫原封不動提交"],
-      materials:["slides","worksheet","plus","data"], form:"", colab:"", notebooklm:"", extra:""
+      materials:["slides_v2","worksheet","plus","data"], form:"", colab:"", notebooklm:"", extra:""
     },
     "16": {
       module:"special", type:"showcase", title:"金融 × 資料 × AI", term:"學生作品成果發表",
