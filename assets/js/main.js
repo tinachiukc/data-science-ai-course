@@ -182,7 +182,9 @@ function renderWeek() {
   $('#week-no').textContent = `WEEK ${weekNo}`;
   $$('.week-no-text').forEach((element) => { element.textContent = `WEEK ${weekNo}`; });
   $('#week-title').textContent = data.title;
-  $('#week-term').textContent = data.term || '';
+  $('#week-term').textContent =
+  [data.term, data.newTopic].filter(Boolean).join('\n');
+$('#week-term').style.whiteSpace = 'pre-line';
   $('#week-question').textContent = data.question;
   document.title = `Week ${Number(weekNo)}｜${data.title}｜資料科學與大數據分析`;
 
