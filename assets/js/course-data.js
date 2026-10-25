@@ -65,7 +65,8 @@ window.COURSE_DATA = {
       materials:["slides","worksheet","plus","data"], form:"", colab:"", notebooklm:"", extra:""
     },
     "07": {
-      module:"m3", title:"找對資料", term:"從問題到變數與分析證據",
+     module:"m3", title:"找對資料", term:"從問題到變數與分析證據",
+     newTopic:"集群分析：了解客戶分群需要哪些資料",
       question:"問題已經想好了，我需要哪些資料才能回答？",
       goals:["從資料問題辨認最低必要資料需求","說明變數在問題中的用途","區分有用資料與只是很多資料","辨識政府、金融公開資訊、市場與課程資料等來源"],
       aiRole:"資料需求顧問：協助列出可能資料與變數，但必須說清楚每項資料為何需要。",
